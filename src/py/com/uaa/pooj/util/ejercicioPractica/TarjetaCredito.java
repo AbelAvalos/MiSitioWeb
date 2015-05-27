@@ -1,0 +1,82 @@
+package py.com.uaa.pooj.util.ejercicioPractica;
+
+import java.util.Date;
+
+
+public class TarjetaCredito extends Tarjeta{
+
+	public Date fechaVencimiento;
+	public int saldoDisponible;
+	public int montoCompra;
+	
+	public int getMontoCompra() {
+		return montoCompra;
+	}
+
+	public void setMontoCompra(int montoCompra) {
+		this.montoCompra = montoCompra;
+	}
+
+	public Date getFechaVencimiento() {
+		return fechaVencimiento;
+	}
+
+	public void setFechaVencimiento(Date fechaVencimiento) {
+		this.fechaVencimiento = fechaVencimiento;
+	}
+
+	public int getSaldoDisponible() {
+		return saldoDisponible;
+	}
+
+	public void setSaldoDisponible(int saldoDisponible) {
+		this.saldoDisponible = saldoDisponible;
+	}
+
+	public TarjetaCredito(String nombreTitular, int nroTarjeta, Date fechaVencimiento, int saldoDisponible) {
+		this.setNombreTitular(nombreTitular);
+		this.setNroTarjeta(nroTarjeta);
+		this.setFechaVencimiento(fechaVencimiento);
+		this.setSaldoDisponible(saldoDisponible);
+		
+	}
+
+
+	
+	public TarjetaCredito() {
+		
+	}
+
+	public String compra(int resultado) {
+          int reultado = 0;
+          if(saldoDisponible >= montoCompra){
+  			System.out.println("Aprobada");
+  			}
+  			
+  			if(saldoDisponible < montoCompra){
+  				System.out.println("Rechazada");	
+  				}
+  			resultado = saldoDisponible - montoCompra;
+  			
+  			return null;
+	
+       
+	}
+	
+	public static void main(String[] args) {
+		TarjetaCredito T1 = new TarjetaCredito();
+		T1.setNroTarjeta(11111);
+		T1.setSaldoDisponible(300000);
+		T1.setMontoCompra(200000);
+
+		
+		
+		
+		
+		
+		
+	}
+	
+}		
+	
+
